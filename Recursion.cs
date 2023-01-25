@@ -105,10 +105,65 @@ namespace DSA
         }
 
         //  reverse a string using recursion
-        // public static string reverseString(string s, int i = 0)
-        // {
-        //     return reverseString(s[i], ++i);
-        // }
+        public static string reverseString(string s, string res = "")
+        {
+            if (s.Length == 0)
+            {
+                return "";
+            }
+            // string pp = "GOKARNA";
+            // System.Console.WriteLine(pp.Remove(0, 1));
 
+            string ss = reverseString(s.Remove(0, 1), res);
+            // System.Console.WriteLine(ss);
+            res = ss + s[0];
+
+            return res;
+        }
+
+        public static int factorial(int n)
+        {
+            if (n <= 1)
+            {
+                return n;
+            }
+            return n*factorial(n-1);
+        }
+    
+        public static long binaryToDecimal(int n, long binary = 0)
+        {
+            if (n <= 0)
+            {
+                return 0;
+            }
+
+            long binary_ = binaryToDecimal(n/2, binary);
+
+            binary = binary_*10 + n%2;
+            // System.Console.Write(binary);
+
+
+            return binary;
+        }
+    
+        public static bool isPrime(int n, int d=2)
+        {
+            if (n%d == 0 || n <= 2) 
+            {
+                return false;
+            }
+            if (d >= n)
+            {
+                return true;
+            }
+
+            return isPrime(n, n+1);
+        }
+    
+        // find the LCM of two numbers
+        // public static int LCM(int x, int y)
+        // {
+        //     static int res = 2
+        // }
     }
 }
