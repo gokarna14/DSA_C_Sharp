@@ -161,9 +161,27 @@ namespace DSA
         }
     
         // find the LCM of two numbers
-        // public static int LCM(int x, int y)
-        // {
-        //     static int res = 2
-        // }
+        public static int LCM(int x, int y, int res = 2)
+        {
+            System.Console.WriteLine("x->{0}, y->{1}, res->{2}", x, y, res);
+            if (x == 1 && y == 1)
+            {
+                return 1;
+            }
+            if (x%res == 0 && y%res == 0)
+            {
+                return res*LCM(x/res, y/res, res); 
+            }
+            else if (x%res == 0)
+            {
+                return res*LCM(x/res, y, res); 
+            }
+            else if (y%res == 0)
+            {
+                return res*LCM(x, y/res, res); 
+            }
+
+            return LCM(x, y, ++res);
+        }
     }
 }

@@ -18,9 +18,8 @@ namespace DSA
             // System.Console.WriteLine(Recursion.reverseString("PRABAS"));
             // System.Console.WriteLine(Recursion.factorial(5));
             // System.Console.WriteLine(Recursion.binaryToDecimal(66));
-
-
-            System.Console.WriteLine(Recursion.isPrime(72));
+            // System.Console.WriteLine(Recursion.isPrime(72));
+            System.Console.WriteLine(Recursion.LCM(12, 18));
             
 
 
