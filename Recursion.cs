@@ -183,5 +183,29 @@ namespace DSA
 
             return LCM(x, y, ++res);
         }
+
+        // print even or odd numbers in given range
+        public static void printNum(int start, int end, string toPrint = "odd")
+        {
+            // System.Console.WriteLine(start + " <-");
+            if (start >= end)
+            {
+                return;
+            }
+            if (toPrint.ToLower() == "odd" && start%2 == 1)
+            {
+                System.Console.WriteLine(start);
+                printNum(start+2, end, toPrint);
+            }
+            else if (toPrint.ToLower() == "even" && start%2 == 0)
+            {
+                System.Console.WriteLine(start);
+                printNum(start+2, end, toPrint);
+            }
+            else
+                printNum(++start, end, toPrint);
+        }
+
+        // public static v
     }
 }
