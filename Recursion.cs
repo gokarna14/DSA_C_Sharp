@@ -206,6 +206,15 @@ namespace DSA
                 printNum(++start, end, toPrint);
         }
 
-        // public static v
+        public static void TowerOfHanoi(int n, string fromTower, string toTower, string usingTower)
+        {
+            if (n <= 0)
+            {
+                return;
+            }
+            TowerOfHanoi(n-1, fromTower, usingTower, toTower);
+            System.Console.WriteLine("Move {0}th peg from {1} to {2} using {3}", n, fromTower, toTower, usingTower);
+            TowerOfHanoi(n-1, usingTower, toTower, fromTower);
+        }
     }
 }

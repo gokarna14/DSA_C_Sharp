@@ -26,8 +26,10 @@ namespace DSA
 
             // Recursion.printNum(0, 100, "even");
 
-            LinkedList<int> ll = new LinkedList<int>(new int[] {1, 2, 3});
+            // LinkedList<int> ll = new LinkedList<int>(new int[] {1, 2, 3});
             // ll.Sum()
+
+            Recursion.TowerOfHanoi(3, "A", "C", "B");
             
             
 
